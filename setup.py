@@ -1,3 +1,4 @@
+from io import open
 import os.path
 import setuptools
 
@@ -12,7 +13,7 @@ with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setuptools.setup(
     name='urgent11-detector',
-    version='0.1.0',
+    version='0.1.1',
     description='URGENT/11 detection tool by Armis',
     long_description=long_description,
     long_description_content_type='text/markdown',
