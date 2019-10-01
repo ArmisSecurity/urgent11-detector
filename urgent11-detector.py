@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # urgent11-detector - IPnet detection tool
 # Copyright (C) 2019 Armis Security.
 # Research paper: https://armis.com/urgent11
