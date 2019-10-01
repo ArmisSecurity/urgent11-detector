@@ -15,14 +15,23 @@ If a device is detected as running IPnet on VxWorks, and is NOT vulnerable to th
 ## Getting Started
 Install the [dependencies](#dependencies) and run:
 ```
-urgent11-detector IP PORT
+./urgent11-detector.py IP PORT
 ```
 
 For example, if you would like to test a device with the ip _192.168.1.100_ which hosts a web server, run:
 ```
-urgent11-detector 192.168.1.100 80
+./urgent11-detector.py 192.168.1.100 80
 ```
 As simple as that.
+
+Alternatively, install this tool directly with pip (or pip3):
+```
+pip install urgent11-detector
+```
+And than run it like this:
+```
+urgent11-detector IP PORT
+```
 
 #### Dependencies
 The only dependencies are _scapy_ and _python-iptables_, install them using:
