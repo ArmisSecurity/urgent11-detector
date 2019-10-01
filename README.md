@@ -31,7 +31,7 @@ Alternatively, you can install the [dependencies](#dependencies) and run it manu
 
 
 #### Dependencies
-The only dependencies are _scapy_ and _python-iptables_, install them using:
+The only dependencies are scapy and python-iptables, install them using:
 ```
 pip install scapy python-iptables
 ```
