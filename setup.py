@@ -36,7 +36,7 @@ setuptools.setup(
     install_requires=['python-iptables', 'scapy'],
     entry_points={
         'console_scripts': [
-            'urgent11-detector=urgent11-detector:main',
+            'urgent11-detector=urgent11-detector:urgent11-detector',
         ],
     },
     project_urls={
