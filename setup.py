@@ -31,12 +31,12 @@ setuptools.setup(
         'Programming Language :: Python :: 3.7',
     ],
     keywords='windriver vxworks rtos interpeak ipnet urgent/11 urgent11 armis',
-    py_modules=['urgent11-detector'],
+    py_modules=['urgent11_detector'],
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
     install_requires=['python-iptables', 'scapy'],
     entry_points={
         'console_scripts': [
-            'urgent11-detector=urgent11-detector:urgent11-detector',
+            'urgent11-detector=urgent11_detector:main',
         ],
     },
     project_urls={
