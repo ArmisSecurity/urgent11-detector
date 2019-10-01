@@ -4,11 +4,21 @@ import setuptools
 
 here = os.path.abspath(os.path.dirname(__file__))
 
+long_description = """
+## urgent11-detector
+urgent11-detector is a tool to detect whether a device is running the Interpeak IPnet TCP/IP stack, and is thus at risk from the URGENT/11 vulnerabilities.
 
-# Get the long description from the README file
-with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+## Motivation
+In light of recent discoveries (see https://armis.com/urgent11), we decided to develop a tool designed to detect whether a device is using Interpeak's IPnet TCP/IP stack, regardless of the RTOS that powers it.
+The IPnet TCP/IP stack is the native, built-in stack for VxWorks since version 6.5, but it has been also been supported by a wide array of RTOSs in the past.
+Detecting the underlying TCP/IP stack used by a device is a non-trivial task, and so by using this tool one can identify devices that are vulnerable to URGENT/11 vulnerabilities.
 
+## How does it work?
+This tool implements 4 unique methods of detection in the form of a TCP and ICMP fingerprints to a target host.
+By calculating the sum of all the methods scores, we can determine with high precision whether a device runs an OS that relies on the IPnet TCP/IP stack and whether this OS is VxWorks.
+Moreover, we also test whether the host is vulnerable to CVE-2019-12258, which is one of the URGENT/11 vulnerabilities that affects all VxWorks versions that use IPnet.
+If a device is detected as running IPnet on VxWorks, and is NOT vulnerable to this CVE, one can deduce this device has been patched against the URGENT/11 vulnerabilities.
+"""
 
 setuptools.setup(
     name='urgent11-detector',
