@@ -15,18 +15,7 @@ Moreover, we also test whether the host is vulnerable to CVE-2019-12258, which i
 If a device is detected as running IPnet on VxWorks, and is NOT vulnerable to this CVE, one can deduce this device has been patched against the URGENT/11 vulnerabilities.
 
 ## Getting Started
-Install the [dependencies](#dependencies) and run:
-```
-./urgent11-detector.py IP PORT
-```
-
-For example, if you would like to test a device with the ip _192.168.1.100_ which hosts a web server, run:
-```
-./urgent11-detector.py 192.168.1.100 80
-```
-As simple as that.
-
-Alternatively, install this tool directly with pip (or pip3):
+Install the tool directly with pip (or pip3):
 ```
 pip install urgent11-detector
 ```
@@ -34,6 +23,12 @@ And than run it like this:
 ```
 urgent11-detector IP PORT
 ```
+
+Alternatively, you can install the [dependencies](#dependencies) and run it manually
+```
+./urgent11-detector.py IP PORT
+```
+
 
 #### Dependencies
 The only dependencies are _scapy_ and _python-iptables_, install them using:
