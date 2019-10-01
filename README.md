@@ -1,4 +1,4 @@
-![urgent11-detector](docs/logo.png)
+![urgent11-detector](https://github.com/ArmisSecurity/urgent11-detector/raw/master/docs/logo.png)
 
 ## urgent11-detector
 urgent11-detector is a tool to detect whether a device is running the Interpeak IPnet TCP/IP stack, and is thus at risk from the URGENT/11 vulnerabilities.
