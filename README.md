@@ -29,6 +29,8 @@ Alternatively, you can install the [dependencies](#dependencies) and run it manu
 ./urgent11-detector.py IP PORT
 ```
 
+## My head hurts.. can you simplify?
+![demo](https://github.com/ArmisSecurity/urgent11-detector/raw/master/docs/demo.gif)
 
 #### Dependencies
 The only dependencies are scapy and python-iptables, install them using:
