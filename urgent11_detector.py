@@ -83,6 +83,15 @@ def is_port_reachable(ip, port):
         return conn.connect_ex((ip, port)) == 0
 
 
+def is_local_ip(ip):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as local_binder:
+        try:
+            local_binder.bind((ip, 0))
+        except OSError:
+            return False
+    return True
+
+
 def validate_flags(pkt, flags):
     return flags in pkt['TCP'].flags
 
@@ -283,8 +292,9 @@ def main():
     parser.add_argument('port', help='Target host port', type=int)
     args = parser.parse_args()
 
-    if not is_port_reachable(args.host, args.port):
-        print('[!] Target IP or port is unreachable, please verify input')
+    if (not is_port_reachable(args.host, args.port) or
+            is_local_ip(args.host)):
+        print('[!] IP or port is unreachable/local, please verify input')
         return
 
     run_detections(args.host, args.port)

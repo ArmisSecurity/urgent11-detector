@@ -13,7 +13,7 @@ with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setuptools.setup(
     name='urgent11-detector',
-    version='0.1.1',
+    version='0.1.2',
     description='URGENT/11 detection tool by Armis',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -24,8 +24,6 @@ setuptools.setup(
         'Intended Audience :: System Administrators',
         'Topic :: Security',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
@@ -33,7 +31,7 @@ setuptools.setup(
     ],
     keywords='windriver vxworks rtos interpeak ipnet urgent/11 urgent11 armis',
     py_modules=['urgent11_detector'],
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
+    python_requires='>=3.4',
     install_requires=['python-iptables', 'scapy'],
     entry_points={
         'console_scripts': [

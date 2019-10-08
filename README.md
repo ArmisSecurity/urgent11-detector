@@ -15,15 +15,14 @@ Moreover, we also test whether the host is vulnerable to CVE-2019-12258, which i
 If a device is detected as running IPnet on VxWorks, and is NOT vulnerable to this CVE, one can deduce this device has been patched against the URGENT/11 vulnerabilities.
 
 ## Getting Started
-Install the tool directly with pip (or pip3):
+Install the tool directly with pip3:
 ```
-pip install urgent11-detector
+pip3 install urgent11-detector
 ```
 And than run it like this:
 ```
 urgent11-detector IP PORT
 ```
-
 Alternatively, you can install the [dependencies](#dependencies) and run it manually
 ```
 ./urgent11-detector.py IP PORT
@@ -33,16 +32,15 @@ Alternatively, you can install the [dependencies](#dependencies) and run it manu
 ![demo](https://github.com/ArmisSecurity/urgent11-detector/raw/master/docs/demo.gif)
 
 #### Dependencies
-The only dependencies are scapy and python-iptables, install them using:
-```
-pip install scapy python-iptables
-```
-or on Python 3.X:
+Assuming you have python3 installed - the only dependencies are scapy and python-iptables.
+Install them using:
 ```
 pip3 install scapy python-iptables
 ```
 or advice the formal [scapy installation guide](https://scapy.readthedocs.io/en/latest/installation.html)
-and the formal [python-iptables documentation](https://github.com/ldx/python-iptables#installing)
+and the formal [python-iptables documentation](https://github.com/ldx/python-iptables#installing).
+
+In addition, urgent11-detector currently supports running on a Linux setup exclusively.
 
 ## License
 Copyright 2019 Armis.
